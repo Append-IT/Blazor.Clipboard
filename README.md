@@ -15,7 +15,7 @@ Install-Package Append.Blazor.Clipboard
 ```
 
 ## Demo
-There is a sample application in /docs folder which is also hosted as [documentation](https://agreeable-rock-071180b03.azurestaticapps.net). 
+There is a sample application in /docs folder which is also hosted as [documentation](https://blazor-clipboard.append.be). 
 
 ## Usage
 
