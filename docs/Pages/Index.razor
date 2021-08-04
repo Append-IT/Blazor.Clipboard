@@ -1,0 +1,40 @@
+﻿@page "/"
+@inject IClipboardService ClipboardService
+
+<h1>Blazor Clipboard! <small>Basic</small></h1>
+<div class="row">
+    <div class="col">
+        <p>Click to button to copy paste defined text from the input element.</p>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" @bind-value="_text">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" @onclick="CopyToClipboardAsync">Copy Text</button>
+            </div>
+        </div>
+        @if (_showMessage)
+        {
+            <div class="alert alert-success" role="alert">
+                @_message
+            </div>
+        }
+        <textarea class="form-control" rows="3"></textarea>
+        <small class="form-text text-muted">Textarea is intended to be used to copy-paste the copied contents.</small>
+
+    </div>
+
+</div>
+
+
+@functions {
+    private string _text = "My Dummy Text";
+    private const string _message = "Text was copied, use CTRL+V to paste.";
+    private bool _showMessage = false;
+    private async Task CopyToClipboardAsync()
+    {
+        await ClipboardService.CopyTextToClipboardAsync(_text);
+        _showMessage = true;
+        StateHasChanged();
+        await Task.Delay(2000);
+        _showMessage = false;
+    }
+}
