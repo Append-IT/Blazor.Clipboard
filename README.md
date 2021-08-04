@@ -1,5 +1,5 @@
 # Clipboard
-Implementation of the [Notification API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API) in C# for [Microsoft Blazor](https://github.com/aspnet/Blazor).
+Implementation of the [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API) in C# for [Microsoft Blazor](https://github.com/aspnet/Blazor).
 
 [![Package Version](https://img.shields.io/nuget/v/Append.Blazor.Clipboard.svg)](https://www.nuget.org/packages/Append.Blazor.Clipboard)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Append.Blazor.Clipboard.svg)](https://www.nuget.org/packages/Append.Blazor.Clipboard)
